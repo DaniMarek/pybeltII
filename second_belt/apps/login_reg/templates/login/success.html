@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/login/styles.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid bg-2 text-center">
+		<h1>Welcome Back, {{user.fname}}!</h1>
+
+		<h1><a href="/">Logout</a></h1>
+
+		<!-- <form action="/users" method="post">
+			{% csrf_token %}
+			<h2>Do what you do best: Compliment!</h2>
+			<div class='form-group'>
+				<label for="msg">Message:</label>
+				<input type="text" name="msg">
+			</div>
+			<div class='form-group'>
+				<button type="submit" name="register">Sign Up</button>
+			</div>
+		</form> -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.bg-1{
+	background-image: url(http://www.bayshorerecycling.com/wp-content/uploads/2013/12/snowfall.jpg);
+	/*snowflake img*/
+	/*background-color: #99FF99;*/
+	color: black; 
+}
+
+.bg-2{
+	background-image: url(http://shimandsons.typepad.com/photos/uncategorized/first_snowfall_2.jpg);
+	/*snowy smiley*/
+	/*background-color: #474e5d;*/
+	color: black;
+}
+.container-fluid{
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+form{
+	width: 500px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+a{
+	color: white;
+}
