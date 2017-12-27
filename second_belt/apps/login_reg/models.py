@@ -9,10 +9,10 @@ import bcrypt
 class UserManager(models.Manager):
 	def validate_registration(self, postData):
 		errors=[]
-		if len(postData['fname'])<2:
-			errors.append('First Name should be more than 2 characters')
-		if len(postData['lname'])<2:
-			errors.append('Last Name should be more than 2 characters')
+		if len(postData['name'])<6:
+			errors.append('Name should be more than 6 characters')
+		if len(postData['alias'])<2:
+			errors.append('Alias should be more than 2 characters')
 		if len(postData['email'])==0:
 			errors.append('Invalid email')
 		# Below code to use email REGEX	
@@ -53,22 +53,23 @@ class UserManager(models.Manager):
 	def create_user(self, postData):
 		hashedpw=bcrypt.hashpw(postData['password'].encode(), bcrypt.gensalt())
 		return User.objects.create(
-			fname=postData['fname'],
-			lname=postData['lname'],
+			name=postData['name'],
+			alias=postData['alias'],
 			email=postData['email'],
 			password=hashedpw,
 			)
 
 class User(models.Model):
-	fname=models.CharField(max_length=255)
-	lname=models.CharField(max_length=255)
+	name=models.CharField(max_length=255)
+	alias=models.CharField(max_length=255)
 	email=models.CharField(max_length=255)
 	password=models.CharField(max_length=255)
 	created_at=models.DateTimeField(auto_now_add=True)
 	updated_at=models.DateTimeField(auto_now=True)
 
+	
 	objects=UserManager()
 
 	def __unicode__(self):
-		return 'fname:{}, lname:{}, email:{}, password:{}, id:{}'.format(self.fname, self.lname, self.email, self.password, self.id)
+		return 'name:{}, alias:{}, email:{}, password:{}, id:{}'.format(self.name, self.alias, self.email, self.password, self.id)
 

@@ -22,12 +22,12 @@
 			<h1>Add a new user</h1>
 			<div class='form-group'>
 				{% csrf_token %}
-				<label for="fname">F Name</label>
-				<input type="text" class="form-control" name="fname">
+				<label for="alias">Alias</label>
+				<input type="text" class="form-control" name="alias">
 			</div>
 			<div class='form-group'>
-				<label for="lname">L Name</label>
-				<input type="text" class="form-control" name="lname">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" name="name">
 			</div>
 			<div class='form-group'>
 				<label for="email">Email</label>
@@ -40,6 +40,10 @@
 			<div class='form-group'>
 				<label>Confirm Password</label>
 				<input type="password" class="form-control" name="password_confirmation">
+			</div>
+			<div class='form-group'>
+				<label>B-Day</label>
+				<input type="date" class="form-control" name="b_day" placeholder="Birthday">
 			</div>
 			<div class='form-group'>
 				<button type="submit" value="register">Sign Up</button>

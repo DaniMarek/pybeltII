@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Success!</title>
+	<title>Who Dis</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="static/login/styles.css">
+	<link rel="stylesheet" type="text/css" href="static/friends/styles.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 </head>
 <body>
-	<div class="container-fluid bg-2 text-center">
+	<div class="container-fluid bg-1 text-center">
+		<h3><a href="/success">Home</a></h3>
+		<h3><a href="/">Logout</a></h3>
 
-		<h1>Welcome Back, {{user.alias}}!</h1>
-		<h2>Here is a list of your friends:</h2>
-		{% if User.add %}
-        
-        {% else %}
-        
-        {% endif %}
-		<h1><a href="/">Logout</a></h1>
+		<h1>{{user.alias}}'s Profile</h1>
 
-		
+		<p>Name: {{friend.name}}</p>
+		<p>Email Address: {{friend.email}}</p>
 	</div>
 </body>
 </html>
